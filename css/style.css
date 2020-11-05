@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    mobile webkit -moz-tap-highlight-color: rgba(255, 255, 255, 0);
+    -ms-tap-highlight-color: rgba(255, 255, 255, 0);
+    tap-highlight-color: rgba(255, 255, 255, 0);
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    /* position: absolute; */
+}
+.main {
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    /* visibility: hidden; */
+    position: relative;
+    /* background-color: white; */
+    cursor: pointer;
+}
+
+/*ALL ELEMENT STYLING AND TRANSITION SHOULD BE INPUTTED HERE*/
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide-1 {
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: background-color 0s ease-out 4s;
+}
+
+.slide-2 {
+    
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-2 > a {
+    color: black !important;
+}
+
+.slide-3 {
+    color: black !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-4 {
+    color: black !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.tagline {
+    margin: 8px 16px;
+    font-size: 18px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.column {
+    padding: 5px;
+}
+
+.btn {
+    border: 1px solid black;
+    border-radius: 25px;
+    background: none;
+    width: 100%;
+    padding: 8px 24px;
+}
+
+/* .slide-left {
+    animation: 
+    slidein
+    1.5s
+    ease-out
+    0s
+    alternate
+    infinite
+    none;
+} */
+
+.slide-left {
+    right: 0px;
+    /* position: absolute; */
+    -webkit-transition-property: right top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: right top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.slide-left-2 {
+    right: 200px;
+    /* position: initial; */
+    -webkit-transition-property: right top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: right top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.slide-right {
+    left: 0px;
+    /* position: absolute; */
+    -webkit-transition-property: left top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.slide-right-2 {
+    left: 200px;
+    /* position: initial; */
+    -webkit-transition-property: left top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.slide-to-left {
+    left: 0px;
+    top: 30%;
+    position: absolute;
+    -webkit-transition-property: width height background-color font-size left top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+
+.slide-to-left-end {
+    left: 300px;
+    top: 30%;
+    position:absolute;
+    -webkit-transition-property: width height background-color font-size left top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.opacity {
+    opacity: 0;
+    font-size: 18px;
+    margin: 8px 16px;
+    -webkit-transition-property: opacity top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: opacity top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.opacity-end {
+    opacity: 1;
+    font-size: 18px;
+    margin: 8px 16px;
+    -webkit-transition-property: opacity top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: opacity top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+/* 
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      left: -300px
+    }
+  
+    to {
+      margin-left: 0%;
+      left: 0px
+    }
+  } */

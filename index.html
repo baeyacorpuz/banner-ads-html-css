@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>300x250</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div id="main" class="main">
+
+        <!--        create a div for each element needed.-->
+        <div id="" class="slideshow-container">
+            <div class="slides slide-1">
+                <img class="animation-element slide-right" src="./images/samsung-logo-png-samsung-logo-png-2104.png" />
+                <h2 class="tagline slide-left">Galaxy Buds+</h2>
+            </div>
+            <div class="slides slide-2">
+                <h2 class="tagline opacity">The earbuds changing the way you experience sound</h2>
+                <img src="./images/image1.png" class="slide-to-left" />
+                <div class="row">
+                    <div class="column">
+                        <img src="./images/Samsung Logo.png" />
+                        <h2 class="">Galaxy Buds+</h2>
+                    </div>
+                    <div class="column">
+                        <button class="btn small">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slides slide-3">
+                <h2 class="tagline opacity">Studio quality outside the studio</h2>
+                <img src="./images/image1.png" class="slide-to-left" />
+                <div class="row">
+                    <div class="column">
+                        <img src="./images/Samsung Logo.png" />
+                        <h2 class="">Galaxy Buds+</h2>
+                    </div>
+                    <div class="column">
+                        <button class="btn small">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slides slide-4">
+                <h2 class="tagline">The earbuds changing the way you experience sound</h2>
+                <img src="./images/image3.png" class="slide-to-left" />
+                <div class="row">
+                    <div class="column">
+                        <img src="./images/Samsung Logo.png" />
+                        <h2 class="">Galaxy Buds+</h2>
+                    </div>
+                    <div class="column">
+                        <button class="btn small">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        var myIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "flex";
+        }
+
+
+        // var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "flex";
+            if (slideIndex !== 0) {
+                setTimeout(carousel, 3000); // Change image every 2 seconds
+            }
+        }
+
+        function updateTransition() {
+            var el = document.querySelector("img.slide-to-left");
+
+            if (el) {
+                el.className = "slide-to-left-end";
+            } else {
+                el = document.querySelector("img.slide-to-left-end");
+                el.className = "slide-to-left";
+            }
+
+            return el;
+        }
+
+        function updateOpacity() {
+            var el2 = document.querySelector("h2.opacity");
+
+            if (el2) {
+                el2.className = "opacity-end";
+            } else {
+                el2 = document.querySelector("h2.opacity-end");
+                el2.className = "opacity";
+            }
+
+            return el2;
+        }
+
+        var intervalID = window.setInterval(updateTransition, 1000);
+        var intervalID = window.setInterval(updateOpacity, 1000);
+
+
+    </script>
+</body>
+
+</html>
